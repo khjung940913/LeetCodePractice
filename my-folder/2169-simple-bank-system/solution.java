@@ -1,47 +1,84 @@
 class Bank {
 
-    Map<Integer, Long> accountBalances;
+    private class Account {
+        int accountId;
+        long balance;
+        ReentrantLock lock;
+
+        public Account(int accountId, long balance) {
+            this.accountId = accountId;
+            this.balance = balance;
+            this.lock = new ReentrantLock();
+        }
+    }
+
+
+    Map<Integer, Account> accounts;
 
     public Bank(long[] balance) {
-        accountBalances = new HashMap<>();
+        accounts = new HashMap<>();
         for(int i = 0; i < balance.length;i++){
-            accountBalances.put(i+1, balance[i]);
+            var accountId = i + 1;
+            accounts.put(accountId, new Account(accountId, balance[i]));
         }
     }
     
     public boolean transfer(int account1, int account2, long money) {
-        if (!accountBalances.containsKey(account1) || !accountBalances.containsKey(account2)) {
+        if (!accounts.containsKey(account1) || !accounts.containsKey(account2) || money < 0) {
             return false;
         }
 
-        if (money < 0 || accountBalances.get(account1) < money) {
-            return false;
+        var from = accounts.get(account1);
+        var to = accounts.get(account2);
+        try {
+            from.lock.lock();
+            if (from.balance < money) {
+                return false;
+            }
+            from.balance -= money;
+            try {
+                to.lock.lock();
+                to.balance += money;
+            } finally {
+                to.lock.unlock();
+            }
+        } finally {
+            from.lock.unlock();
         }
 
-        accountBalances.put(account1, accountBalances.get(account1) - money);
-        accountBalances.put(account2, accountBalances.get(account2) + money);
         return true;
     }
     
     public boolean deposit(int account, long money) {
-        if (!accountBalances.containsKey(account) || money < 0) {
+        if (!accounts.containsKey(account) || money < 0) {
             return false;
         }
 
-        accountBalances.put(account, accountBalances.get(account) + money);
+        var acc = accounts.get(account);
+        try {
+            acc.lock.lock();
+            acc.balance += money;
+        } finally {
+            acc.lock.unlock();
+        }
         return true;
     }
     
     public boolean withdraw(int account, long money) {
-        if (!accountBalances.containsKey(account) || money < 0) {
+        if (!accounts.containsKey(account) || money < 0) {
             return false;
         }
 
-        if (accountBalances.get(account) < money) {
-            return false;
+        var acc = accounts.get(account);
+        try {
+            acc.lock.lock();
+            if (acc.balance < money) {
+                return false;
+            }
+            acc.balance -= money;
+        } finally {
+            acc.lock.unlock();
         }
-
-        accountBalances.put(account, accountBalances.get(account) - money);
         return true;
     }
 }
