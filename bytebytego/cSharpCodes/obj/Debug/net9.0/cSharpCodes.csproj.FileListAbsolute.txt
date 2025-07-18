@@ -1,0 +1,15 @@
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\bin\Debug\net9.0\cSharpCodes.exe
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\bin\Debug\net9.0\cSharpCodes.deps.json
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\bin\Debug\net9.0\cSharpCodes.runtimeconfig.json
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\bin\Debug\net9.0\cSharpCodes.dll
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\bin\Debug\net9.0\cSharpCodes.pdb
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.AssemblyInfoInputs.cache
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.AssemblyInfo.cs
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.csproj.CoreCompileInputs.cache
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.sourcelink.json
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.dll
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\refint\cSharpCodes.dll
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.pdb
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\cSharpCodes.genruntimeconfig.cache
+C:\Users\nhj94\dev\code-interview-practice\LeetCodePractice\bytebytego\cSharpCodes\obj\Debug\net9.0\ref\cSharpCodes.dll
