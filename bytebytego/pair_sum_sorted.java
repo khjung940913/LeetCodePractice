@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Main {
+public class pair_sum_sorted {
     public ArrayList<Integer> pair_sum_sorted(ArrayList<Integer> nums, int target) {
         // Write your code here
         int i = 0;
